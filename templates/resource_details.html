@@ -1,0 +1,39 @@
+{% load static %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+<!-- Style -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+{% include 'sidebar.html' %}
+<div class="container"></div>
+
+
+  <div class="leftcolumn">
+
+<div class="col-sm-8">
+  <h2>{{disaster_detail.resource_name}}</h2>
+  <h5>{{disaster_detail.type}}</h5>
+  <div class="fakeimg">{{disaster_detail.allocation_status}}</div>
+  <p>{{disaster_detail.details}}</p>
+  <p>{{disaster_detail.quantity}}</p>
+  <p>{{disaster_detail.allocation_history}}</p>
+  <p>{{disaster_detail.assignment}}</p>
+
+</div>
+
+  </div>
+  

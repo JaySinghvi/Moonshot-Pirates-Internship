@@ -1,0 +1,97 @@
+{% include 'header.html' %}
+{% block content %}
+<div class="bg-img">
+
+<form method="post" class="container">
+  {% csrf_token %}
+  <input type="hidden" name="csrfmiddlewaretoken" value="BwdHZvfsKTPpCowIcKMgmklfPTFTaPGVV7KXFWgN1Toz3UXqFJUtgBiGrfwsOkf0">
+    <label for="id_email">Email address:</label>
+    <input type="email" name="email" maxlength="254" autofocus="" required="" id="id_email">
+
+    <label for="id_password1">Password:</label>
+    <input type="password" name="password1" autocomplete="new-password" required="" aria-describedby="id_password1_helptext" id="id_password1" aria-autocomplete="list">
+    
+      <span class="helptext" id="id_password1_helptext"></span>
+  
+  
+    <label for="id_password2">Password confirmation:</label>
+    <input type="password" name="password2" autocomplete="new-password" required="" aria-describedby="id_password2_helptext" id="id_password2">
+    
+      <span class="helptext" id="id_password2_helptext"></span>
+    
+    
+      
+    
+  </p>
+  <button type="submit" class="btn">Sign Up</button>
+</form>
+{% endblock %}
+
+
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://www.w3schools.com/howto/img_nature.jpg");
+
+  min-height: 900px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+
+

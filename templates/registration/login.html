@@ -1,0 +1,83 @@
+{% include 'header.html' %}
+{% block content %}
+
+<div class="bg-img">
+<form method="post" class="container">
+  {% csrf_token %}
+  
+    <input type="hidden" name="csrfmiddlewaretoken" value="eCDsYWdloBDlWGpfoZcnIvBO4H0CScOZvHGqqyQ0wZCqAqRYANxygOsDJUvzU04t">
+
+      <label for="id_username">Email address:</label>
+      <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="254" required="" id="id_username">
+      
+
+      <label for="id_password">Password:</label>
+      <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+
+  <button type="submit" class="btn">Log In</button>
+</form>
+</div>
+{% endblock %}
+
+<style>
+  body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-img {
+    /* The image used */
+    background-image: url("https://www.w3schools.com/howto/img_nature.jpg");
+  
+    min-height: 900px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Add styles to the form container */
+  .container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password], input[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  </style>
